@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アドパス｜Google広告もMeta広告も、通す。</title>
+<meta name="description" content="Google広告・Meta広告の不承認やアカウント停止に。オンラインクリニック・投資・健康食品など審査が厳しい商材のLPを、原因特定から修正・再審査申請まで仕上げます。先着5社限定で5日間無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg2:#f5f7fa; --bg3:#eef2f7;
+  --ink:#0f1b2d; --ink2:#3b4658; --muted:#6b7688;
+  --line:#dfe5ee; --navy:#12306b; --navy2:#1c4596;
+  --ok:#14955c; --ok-bg:#e7f6ee; --warn:#b7791f; --warn-bg:#fdf4e3; --ng:#c73a3a; --ng-bg:#fcebeb;
+  --radius:14px; --shadow:0 10px 30px rgba(15,27,45,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.en{font-family:'Inter',sans-serif;letter-spacing:.04em}
+section{padding:88px 0}
+.eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--navy2);margin-bottom:12px}
+h2{font-size:clamp(24px,3.4vw,34px);line-height:1.45;font-weight:900;margin-bottom:16px}
+.lead{color:var(--ink2);max-width:720px}
+.center{text-align:center}.center .lead{margin:0 auto}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Inter',sans-serif;font-weight:800;font-size:20px;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:7px;background:var(--navy);color:#fff;font-style:normal;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font-weight:700;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit}
+.btn-primary{background:var(--navy);color:#fff;padding:16px 30px;font-size:16px;box-shadow:0 8px 20px rgba(18,48,107,.25)}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn-sm{padding:10px 18px;font-size:14px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#f3f6fb 0%,#fff 100%);padding:72px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.badge{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink2)}
+h1{font-size:clamp(30px,4.6vw,48px);line-height:1.35;font-weight:900;letter-spacing:-.01em;margin-bottom:20px}
+h1 em{font-style:normal;color:var(--navy2);background:linear-gradient(transparent 68%,#d9e5fb 68%)}
+.hero p.sub{color:var(--ink2);font-size:17px;margin-bottom:28px}
+.hero-points{list-style:none;display:grid;gap:10px}
+.hero-points li{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.chk{flex:none;width:22px;height:22px;border-radius:50%;background:var(--ok-bg);color:var(--ok);display:grid;place-items:center;font-size:13px;font-weight:900;margin-top:3px}
+
+/* form card */
+.form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+.form-card h3{font-size:19px;font-weight:900;margin-bottom:4px}
+.form-card .note{font-size:13px;color:var(--muted);margin-bottom:18px}
+.f-group{margin-bottom:14px}
+.f-label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.f-label .req{color:var(--ng);margin-left:4px}
+.f-input{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe;color:var(--ink)}
+.f-input:focus{outline:2px solid var(--navy2);outline-offset:1px;background:#fff}
+.btn-submit{width:100%;margin-top:6px}
+.f-foot{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.success-msg{display:none;text-align:center;padding:24px 8px}
+.success-msg .big{width:56px;height:56px;border-radius:50%;background:var(--ok-bg);color:var(--ok);display:grid;place-items:center;font-size:26px;font-weight:900;margin:0 auto 12px}
+
+/* pains */
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px}
+.pain{background:var(--bg2);border-radius:var(--radius);padding:22px 24px;display:flex;gap:14px}
+.pain .q{flex:none;font-family:'Inter';font-weight:800;color:var(--ng);font-size:18px;line-height:1.5}
+.pain b{display:block;margin-bottom:4px}
+.pain span{color:var(--ink2);font-size:15px}
+
+/* causes */
+.bg-soft{background:var(--bg2)}
+.cause-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.cause{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.cause .num{font-family:'Inter';font-weight:800;color:var(--navy2);font-size:14px;margin-bottom:6px}
+.cause h3{font-size:19px;font-weight:900;margin-bottom:10px}
+.cause p{color:var(--ink2);font-size:15px;margin-bottom:12px}
+.cause ul{list-style:none;display:grid;gap:6px}
+.cause li{font-size:14px;padding-left:16px;position:relative;color:var(--ink2)}
+.cause li:before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--navy2)}
+
+/* example table */
+.ex{margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.ex-row{display:grid;grid-template-columns:90px 1fr 1fr;border-top:1px solid var(--line)}
+.ex-row:first-child{border-top:0;background:var(--bg3);font-weight:700;font-size:14px}
+.ex-row>div{padding:16px 18px;font-size:15px}
+.lv{display:inline-block;font-size:12px;font-weight:900;padding:3px 10px;border-radius:999px}
+.lv.r{background:var(--ng-bg);color:var(--ng)}.lv.y{background:var(--warn-bg);color:var(--warn)}.lv.g{background:var(--ok-bg);color:var(--ok)}
+.ex-row .before{color:var(--ink2)}
+.ex-row .before s{color:var(--ng);text-decoration-thickness:1px}
+.ex-cap{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;counter-reset:s}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px}
+.step .sn{font-family:'Inter';font-weight:800;font-size:13px;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;margin-bottom:14px}
+.step h3{font-size:17px;font-weight:900;margin-bottom:8px}
+.step p{font-size:14px;color:var(--ink2)}
+
+/* free diag */
+.diag{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.diag-list{display:grid;gap:14px}
+.diag-item{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+.diag-item .n{flex:none;font-family:'Inter';font-weight:800;font-size:28px;color:var(--navy2);line-height:1}
+.diag-item b{display:block;margin-bottom:2px}
+.diag-item span{font-size:14px;color:var(--ink2)}
+
+/* no */
+.no-box{border:2px solid var(--ink);border-radius:18px;padding:40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.no-list{list-style:none;display:grid;gap:14px}
+.no-list li{display:flex;gap:12px;align-items:flex-start}
+.x{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ng-bg);color:var(--ng);display:grid;place-items:center;font-weight:900;font-size:13px;margin-top:2px}
+.no-list b{display:block}
+.no-list span{font-size:14px;color:var(--ink2)}
+
+/* industries */
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.ind{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.ind b{display:block;font-size:17px;margin-bottom:4px}
+.ind .law{display:inline-block;font-size:12px;font-weight:700;color:var(--navy2);background:#e9effb;padding:2px 10px;border-radius:999px;margin-bottom:8px}
+.ind p{font-size:14px;color:var(--ink2)}
+
+/* cta band */
+.band{background:var(--navy);color:#fff;border-radius:22px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.band h2{color:#fff;margin:0 0 6px}
+.band p{color:#c9d5ee}
+.band .btn{background:#fff;color:var(--navy)}
+.band .btn:hover{background:#eef3fc}
+
+/* faq */
+.faq{max-width:820px;margin:36px auto 0;display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 22px}
+summary{list-style:none;cursor:pointer;padding:18px 28px 18px 0;font-weight:700;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:0;top:14px;font-size:22px;color:var(--navy2);font-weight:500}
+details[open] summary:after{content:"−"}
+details p{padding:0 0 18px;color:var(--ink2);font-size:15px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact ul{list-style:none;display:grid;gap:10px;margin-top:20px}
+.contact li{display:flex;gap:10px}
+
+/* trial */
+.trial-strip{background:var(--ink);color:#fff;text-align:center;font-size:14px;font-weight:700;padding:10px 16px}
+.trial-strip b{color:#ffd66b}
+.trial{background:linear-gradient(135deg,#12306b,#1c4596);color:#fff;border-radius:22px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.trial h2{color:#fff}
+.trial .lead{color:#d3ddf2}
+.trial-tag{display:inline-block;background:#ffd66b;color:#1a1a1a;font-weight:900;font-size:14px;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+.trial-box{background:#fff;color:var(--ink);border-radius:16px;padding:26px}
+.trial-box h3{font-size:17px;font-weight:900;margin-bottom:12px}
+.trial-box ol{padding-left:0;list-style:none;display:grid;gap:12px;counter-reset:d}
+.trial-box li{display:flex;gap:12px;font-size:15px}
+.trial-box .day{flex:none;font-family:'Inter';font-weight:800;font-size:12px;color:var(--navy2);background:#e9effb;border-radius:8px;padding:3px 8px;height:fit-content;margin-top:3px}
+.trial-box .btn{width:100%;margin-top:18px}
+.trial-note{font-size:12px;color:var(--muted);margin-top:10px}
+.seats{display:flex;gap:6px;margin:18px 0 6px}
+.seats span{width:34px;height:10px;border-radius:5px;background:#ffd66b}
+.hero-note{font-size:12px;color:var(--muted);margin-top:16px}
+
+/* cases */
+.case{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:28px}
+.case-hd{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:22px 28px;border-bottom:1px solid var(--line);background:var(--bg3)}
+.case-hd b{font-size:19px;font-weight:900}
+.media{display:flex;gap:6px}
+.media span{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.case-body{display:grid;grid-template-columns:1fr 1fr}
+.case-col{padding:24px 28px}
+.case-col+.case-col{border-left:1px solid var(--line)}
+.case-col h4{font-size:14px;font-weight:900;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.tag-ng{background:var(--ng-bg);color:var(--ng);font-size:12px;padding:2px 10px;border-radius:999px}
+.tag-ok{background:var(--ok-bg);color:var(--ok);font-size:12px;padding:2px 10px;border-radius:999px}
+.case-col ul{list-style:none;display:grid;gap:10px}
+.case-col li{font-size:15px;color:var(--ink2);padding-left:18px;position:relative}
+.case-col.before li:before{content:"×";position:absolute;left:0;color:var(--ng);font-weight:900}
+.case-col.after li:before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:900}
+.case-col li s{color:var(--ng)}
+.case-col li em{font-style:normal;color:var(--ink);font-weight:700}
+.case-cap{font-size:13px;color:var(--muted);margin-top:14px}
+
+footer{background:#0b1424;color:#9aa6ba;padding:40px 0;font-size:13px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer b{color:#fff}
+
+.float-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none}
+.float-cta .btn{width:100%}
+
+@media (max-width:900px){
+  .trial{grid-template-columns:1fr;padding:32px 22px;gap:28px}
+  .case-body{grid-template-columns:1fr}
+  .case-col+.case-col{border-left:0;border-top:1px solid var(--line)}
+  .case-hd,.case-col{padding:18px 20px}
+  section{padding:64px 0}
+  .hero{padding:44px 0 56px}
+  .hero-grid,.diag,.no-box,.contact{grid-template-columns:1fr;gap:32px}
+  .cause-grid,.ind-grid{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .pain-grid{grid-template-columns:1fr}
+  .band{flex-direction:column;align-items:flex-start;padding:32px 24px}
+  .no-box{padding:28px 22px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .flow{grid-template-columns:1fr}
+  .ex-row{grid-template-columns:1fr}
+  .ex-row:first-child{display:none}
+  .ex-row>div{padding:10px 16px}
+  .ex-row>div:first-child{padding-top:16px}
+  .ex-row>div:last-child{padding-bottom:16px}
+  .hd .btn-sm{display:none}
+  .float-cta.visible{display:block}
+  body{padding-bottom:84px}
+}
+</style>
+</head>
+<body>
+
+<div class="trial-strip">先着<b>5社限定</b>　アドパスを<b>5日間無料</b>でお試しいただけます</div>
+<header>
+  <div class="wrap hd">
+    <a href="#top" class="logo"><i>✓</i>AD PASS</a>
+    <a href="#contact" class="btn btn-primary btn-sm">5日間無料で試す</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge-row">
+        <span class="badge">Google広告</span><span class="badge">Meta広告</span><span class="badge">不承認・アカウント停止</span>
+      </div>
+      <h1>Google広告も、<br>Meta広告も、<br><em>通す。</em></h1>
+      <p class="sub">オンラインクリニック、投資・金融、健康食品。審査が厳しい商材のLPと広告文を、原因の特定から修正、再審査申請まで一貫して仕上げます。</p>
+      <ul class="hero-points">
+        <li><span class="chk">✓</span>Google広告・Meta広告の両方の審査基準で同時にチェック</li>
+        <li><span class="chk">✓</span>薬機法・景表法・媒体ポリシーを同時に確認します</li>
+        <li><span class="chk">✓</span>先着5社限定、5日間の無料お試しを受付中</li>
+      </ul>
+      <p class="hero-note">※審査の最終判断は各広告媒体が行います。</p>
+    </div>
+    <div class="form-card">
+      <h3>アドパス 5日間無料お試し</h3>
+      <p class="note">先着5社限定。所要1分、担当者から1営業日以内にご連絡します。</p>
+      <form class="cv-form" data-form-id="hero">
+        <div class="f-group"><label class="f-label">会社名<span class="req">*</span></label><input class="f-input" name="company" required autocomplete="organization"></div>
+        <div class="f-group"><label class="f-label">メールアドレス<span class="req">*</span></label><input class="f-input" type="email" name="email" required autocomplete="email"></div>
+        <div class="f-group"><label class="f-label">電話番号<span class="req">*</span></label><input class="f-input" type="tel" name="phone" required autocomplete="tel"></div>
+        <div class="f-group"><label class="f-label">いまの状況</label>
+          <select class="f-input" name="situation">
+            <option value="">選択してください（任意）</option>
+            <option>広告・LPが不承認になっている</option>
+            <option>広告アカウントが停止された</option>
+            <option>まだ落ちていないが出稿前に確認したい</option>
+            <option>代理店としてクライアント案件を相談したい</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">5日間無料で試す</button>
+        <p class="f-foot">いただいた情報はお試しのご連絡にのみ使用します</p>
+      </form>
+      <div class="success-msg"><div class="big">✓</div><b>送信が完了しました</b><p class="f-foot">ご入力のメールアドレス宛に、日程調整のご案内をお送りします。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">PROBLEM</span>
+    <h2>こんな状態で、止まっていませんか</h2>
+  </div>
+  <div class="wrap pain-grid">
+    <div class="pain"><span class="q">01</span><div><b>不承認の理由が曖昧で、どこを直せばいいか分からない</b><span>通知にはポリシー名しか出ず、LPのどの一文が引っかかったのか特定できない。</span></div></div>
+    <div class="pain"><span class="q">02</span><div><b>直して再申請しても、また落ちる</b><span>原因と違う箇所を直しているため、再審査のたびに時間と配信機会が失われていく。</span></div></div>
+    <div class="pain"><span class="q">03</span><div><b>アカウントごと停止され、全広告が止まった</b><span>異議申し立ての書き方が分からず、定型の返答が届くだけで状況が動かない。</span></div></div>
+    <div class="pain"><span class="q">04</span><div><b>「そのジャンルは難しい」と代理店に断られた</b><span>美容医療・健康食品・金融など、規制が厳しい業種ほど相談先が見つからない。</span></div></div>
+  </div>
+</section>
+
+<!-- CAUSES -->
+<section class="bg-soft">
+  <div class="wrap center">
+    <span class="eyebrow">WHY IT FAILS</span>
+    <h2>審査落ちの原因は、ほぼ3つに分かれます</h2>
+    <p class="lead">原因の層を取り違えたまま直すと、何度申請しても通りません。最初に「どの層の問題か」を切り分けます。</p>
+  </div>
+  <div class="wrap cause-grid">
+    <div class="cause">
+      <div class="num en">01 / EXPRESSION</div>
+      <h3>表現</h3>
+      <p>広告文・LPの言い回しが、法令や媒体ポリシーに触れているケース。</p>
+      <ul><li>効果効能の断定、ビフォーアフター</li><li>根拠のない「No.1」「最安」</li><li>個人の悩み・身体的特徴への言及</li></ul>
+    </div>
+    <div class="cause">
+      <div class="num en">02 / DESTINATION</div>
+      <h3>LP・遷移先</h3>
+      <p>表現は問題なくても、リンク先の作りが要件を満たしていないケース。</p>
+      <ul><li>広告とLPの内容が一致していない</li><li>特商法表記・価格・解約条件の不足</li><li>表示不良・リンク切れ・遷移の多重化</li></ul>
+    </div>
+    <div class="cause">
+      <div class="num en">03 / ACCOUNT</div>
+      <h3>アカウント</h3>
+      <p>広告物ではなく、アカウントの状態そのものが理由になっているケース。</p>
+      <ul><li>支払い情報・本人確認の未完了</li><li>過去の違反履歴の蓄積</li><li>停止済みアカウントとの関連付け</li></ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- CASES -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">CASES</span>
+    <h2>こういうLPを、こう直して通します</h2>
+    <p class="lead">審査が厳しい商材で、実際によく止まるポイントと修正のしかたです。</p>
+  </div>
+  <div class="wrap">
+
+    <div class="case">
+      <div class="case-hd"><b>オンラインクリニック</b><div class="media"><span>Google広告</span><span>Meta広告</span></div></div>
+      <div class="case-body">
+        <div class="case-col before"><h4><span class="tag-ng">止まるLP</span></h4>
+          <ul>
+            <li>広告文・LPに<s>処方薬の商品名</s>を出して訴求している</li>
+            <li><s>「誰でも痩せる」「副作用なし」</s>など効果と安全性を断定</li>
+            <li>患者の体験談・ビフォーアフター写真を条件なしで掲載</li>
+            <li>自由診療の費用、リスク・副作用の説明がページ内に無い</li>
+          </ul>
+        </div>
+        <div class="case-col after"><h4><span class="tag-ok">通すLP</span></h4>
+          <ul>
+            <li>訴求を<em>医薬品ではなく「診療・相談の受けやすさ」</em>に切り替え</li>
+            <li>効果は「医師の診察のうえで処方の可否を判断」と事実ベースに</li>
+            <li>体験談・症例写真は外すか、医療広告ガイドラインの要件を満たす形に</li>
+            <li><em>標準的な費用・治療期間・主なリスクと副作用</em>をLP内に明記</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-hd"><b>投資・資産運用系の商材</b><div class="media"><span>Google広告</span><span>Meta広告</span></div></div>
+      <div class="case-body">
+        <div class="case-col before"><h4><span class="tag-ng">止まるLP</span></h4>
+          <ul>
+            <li><s>「月利10%」「元本保証」「確実に増える」</s>と利益を断定</li>
+            <li>一部の成功者の収益画面だけを並べて、再現性があるように見せている</li>
+            <li>運営会社・登録番号・所在地がLPから辿れない</li>
+            <li>リスクや手数料の説明が無い、または極端に小さい</li>
+          </ul>
+        </div>
+        <div class="case-col after"><h4><span class="tag-ok">通すLP</span></h4>
+          <ul>
+            <li>訴求を<em>利益の約束から「学べる内容・サービスの仕組み」</em>へ</li>
+            <li>実績を出す場合は期間・条件を添え、成果を保証しない旨を明記</li>
+            <li>運営会社情報と、必要な場合は<em>登録番号・媒体の金融サービス認証</em>を整備</li>
+            <li>元本割れの可能性・手数料をファーストビュー近くで表示</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-hd"><b>健康食品・化粧品</b><div class="media"><span>Google広告</span><span>Meta広告</span></div></div>
+      <div class="case-body">
+        <div class="case-col before"><h4><span class="tag-ng">止まるLP</span></h4>
+          <ul>
+            <li><s>「飲むだけで−5kg」「シミが消える」</s>と身体の変化を断定</li>
+            <li><s>「こんなお腹に悩むあなたへ」</s>と個人の悩みを名指し</li>
+            <li>出典のない「No.1」「満足度98%」</li>
+          </ul>
+        </div>
+        <div class="case-col after"><h4><span class="tag-ok">通すLP</span></h4>
+          <ul>
+            <li>表現を<em>食品・化粧品として言える効能の範囲</em>に収める</li>
+            <li>呼びかけを「〜を目指す方へ」など悩みを特定しない形に</li>
+            <li>No.1表記には<em>調査機関・期間・対象</em>を注記、根拠が無ければ削除</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="case-cap">※上記は、各業種でよく見られる不承認の傾向をもとにした修正例です。</p>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">SERVICE</span>
+    <h2>診断から再審査、その後の監視まで</h2>
+  </div>
+  <div class="wrap flow">
+    <div class="step"><div class="sn">1</div><h3>原因の特定</h3><p>管理画面の通知・ポリシー名・対象広告を確認し、表現／LP／アカウントのどこに原因があるかを切り分けます。</p></div>
+    <div class="step"><div class="sn">2</div><h3>修正案の作成</h3><p>該当箇所を引用し、赤・黄・緑の判定と言い換え案を提示。LPの構成や必要な表記の追加もご提案します。</p></div>
+    <div class="step"><div class="sn">3</div><h3>再審査・申し立て</h3><p>修正内容を踏まえた再審査申請、アカウント停止時の異議申し立て文面の作成を支援します。</p></div>
+    <div class="step"><div class="sn">4</div><h3>継続チェック</h3><p>新しい広告やLPを出す前にレビュー。ポリシー改定があれば、影響する箇所をお知らせします。</p></div>
+  </div>
+</section>
+
+<!-- TRIAL -->
+<section>
+  <div class="wrap">
+    <div class="trial">
+      <div>
+        <span class="trial-tag">先着5社限定</span>
+        <h2>アドパスを、<br>5日間無料でお試しいただけます</h2>
+        <p class="lead">止まっている広告やLPを1本お預かりし、5日間で原因の特定から修正案、再審査申請までを実際に進めます。費用は一切かかりません。続けるかどうかは、5日間の結果を見てからお決めください。</p>
+        <div class="seats"><span></span><span></span><span></span><span></span><span></span></div>
+        <p style="font-size:13px;color:#d3ddf2">募集枠：5社（枠が埋まり次第、受付を終了します）</p>
+      </div>
+      <div class="trial-box">
+        <h3>5日間でやること</h3>
+        <ol>
+          <li><span class="day">DAY 1</span><div>管理画面の通知・広告文・LPを確認し、不承認の原因を特定</div></li>
+          <li><span class="day">DAY 2-3</span><div>Google広告・Meta広告それぞれの基準で修正案を作成（赤・黄・緑で優先順位つき）</div></li>
+          <li><span class="day">DAY 4</span><div>修正内容を反映し、再審査を申請</div></li>
+          <li><span class="day">DAY 5</span><div>結果と今後の進め方をオンラインでご報告</div></li>
+        </ol>
+        <a href="#contact" class="btn btn-primary">5日間無料で試す</a>
+        <p class="trial-note">対象は1社につき広告アカウント1つ・LP1本まで。お試し終了後に自動で有料へ切り替わることはありません。媒体側の審査結果が5日以内に出ない場合があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="bg-soft">
+  <div class="wrap center">
+    <span class="eyebrow">INDUSTRIES</span>
+    <h2>規制が厳しい業種ほど、ご相談ください</h2>
+  </div>
+  <div class="wrap ind-grid">
+    <div class="ind"><span class="law">医療広告ガイドライン</span><b>美容医療・クリニック</b><p>体験談・ビフォーアフター・費用表示の扱い、自由診療の表記要件など。</p></div>
+    <div class="ind"><span class="law">薬機法・景表法</span><b>健康食品・化粧品・医薬部外品</b><p>効能効果の範囲、打消し表示、定期購入の条件表示など。</p></div>
+    <div class="ind"><span class="law">金融関連の表示規制</span><b>金融・FX・投資</b><p>媒体側の認証要件、リスク表示、利回り・実績の見せ方など。</p></div>
+    <div class="ind"><span class="law">景表法・特商法</span><b>スクール・オンライン講座</b><p>収入・成果の表現、返金条件、限定性の打ち出し方など。</p></div>
+    <div class="ind"><span class="law">媒体ポリシー</span><b>D2C・通販全般</b><p>LPと広告の一致、価格・解約導線、レビュー表示の扱いなど。</p></div>
+    <div class="ind"><span class="law">ホワイトラベル対応</span><b>広告代理店さま</b><p>クライアント案件の審査対応を、貴社の裏側でお引き受けします。</p></div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section>
+  <div class="wrap">
+    <div class="band">
+      <div><h2>先着5社、5日間無料。まず1本見せてください</h2><p>管理画面の通知とLPのURLがあれば、すぐに始められます。</p></div>
+      <a href="#contact" class="btn btn-primary">5日間無料で試す</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-soft">
+  <div class="wrap center">
+    <span class="eyebrow">FAQ</span>
+    <h2>よくあるご質問</h2>
+  </div>
+  <div class="wrap faq">
+    <details><summary>5日間の無料お試しでは、何をしてもらえますか？</summary><p>広告アカウント1つ・LP1本を対象に、不承認の原因特定、Google広告・Meta広告の基準での修正案作成、再審査申請、結果のご報告までを無料で行います。お試し後に自動で有料契約へ切り替わることはありません。</p></details>
+    <details><summary>先着5社の枠が埋まったらどうなりますか？</summary><p>5社に達した時点で無料お試しの受付を終了します。その後のお申し込みは、通常のご相談としてご案内します。</p></details>
+    <details><summary>必ず審査に通りますか？</summary><p>審査の最終判断は各広告媒体が行うため、お約束はできません。そのぶん、通すために必要な修正箇所を具体的に洗い出し、再審査まで責任を持って進めます。</p></details>
+    <details><summary>停止されたアカウントは復旧できますか？</summary><p>停止理由を特定したうえで、原因の解消と異議申し立てを支援します。復旧の可否は媒体の判断になります。</p></details>
+    <details><summary>相談の時点で何を用意すればいいですか？</summary><p>不承認・停止の通知画面（スクリーンショットで可）、対象の広告文、LPのURLをご用意ください。詳細な確認が必要な場合は、管理画面の閲覧権限をお願いすることがあります。</p></details>
+    <details><summary>どのくらいの期間がかかりますか？</summary><p>表現の修正で解決するケースは、診断から再申請まで数営業日が目安です。アカウント停止の申し立ては媒体の返答待ちが発生するため、数週間かかることがあります。</p></details>
+    <details><summary>料金はいくらですか？</summary><p>最初の5日間は無料です（先着5社）。継続される場合は、新しい広告・LPを出す前のレビューを含む月額プランをご用意しています。お試しの結果をもとにお見積りします。</p></details>
+    <details><summary>広告運用もお願いできますか？</summary><p>本サービスは審査対応に特化しており、運用代行は含みません。既存の運用体制・代理店さまはそのままに、審査対応の部分だけをお任せいただけます。</p></details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <span class="eyebrow">CONTACT</span>
+      <h2>5日間無料お試しのお申し込み</h2>
+      <p class="lead">先着5社限定です。送信後、日程調整のご案内をメールでお送りします。オンラインで30分ほど状況をお伺いし、お試しを開始します。</p>
+      <ul>
+        <li><span class="chk">✓</span>5日間、費用は一切かかりません</li>
+        <li><span class="chk">✓</span>お試し後に自動で有料になることはありません</li>
+        <li><span class="chk">✓</span>代理店さまからのご相談も歓迎します</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <form class="cv-form" data-form-id="bottom">
+        <div class="f-group"><label class="f-label">会社名<span class="req">*</span></label><input class="f-input" name="company" required autocomplete="organization"></div>
+        <div class="f-group"><label class="f-label">担当者名</label><input class="f-input" name="person" autocomplete="name"></div>
+        <div class="f-group"><label class="f-label">メールアドレス<span class="req">*</span></label><input class="f-input" type="email" name="email" required autocomplete="email"></div>
+        <div class="f-group"><label class="f-label">電話番号<span class="req">*</span></label><input class="f-input" type="tel" name="phone" required autocomplete="tel"></div>
+        <div class="f-group"><label class="f-label">業種</label>
+          <select class="f-input" name="industry">
+            <option value="">選択してください（任意）</option>
+            <option>美容医療・クリニック</option><option>健康食品・化粧品・医薬部外品</option><option>金融・FX・投資</option><option>スクール・オンライン講座</option><option>D2C・通販</option><option>広告代理店</option><option>その他</option>
+          </select>
+        </div>
+        <div class="f-group"><label class="f-label">いまの状況</label>
+          <select class="f-input" name="situation">
+            <option value="">選択してください（任意）</option>
+            <option>広告・LPが不承認になっている</option>
+            <option>広告アカウントが停止された</option>
+            <option>まだ落ちていないが出稿前に確認したい</option>
+            <option>代理店としてクライアント案件を相談したい</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">5日間無料で試す</button>
+      </form>
+      <div class="success-msg"><div class="big">✓</div><b>送信が完了しました</b><p class="f-foot">ご入力のメールアドレス宛に、日程調整のご案内をお送りします。</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <div><b class="en">AD PASS</b><br>Google広告・Meta広告の審査対応支援</div>
+    <div>運営：<b>株式会社エッセンスクライアント</b><br>東京都文京区千石2丁目35番9-104号<br>info@essenceclient.co.jp<br><a href="./privacy.html" style="color:#9aa6ba">プライバシーポリシー</a></div>
+  </div>
+</footer>
+
+<div class="float-cta" id="float-cta"><a href="#contact" class="btn btn-primary">5日間無料で試す</a></div>
+
+<script>
+  // 既存GAS（リード一覧シート記録＋Chatwork通知＋自動返信）へ送信
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbwAOOooMt1p7GWf32EDMpXSdlzGaIcs6J9H2Dui7hISn9MxeiU95oPsND4vlySc3UVh/exec';
+
+  document.querySelectorAll('.cv-form').forEach(form => {
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit');
+      btn.textContent = '送信中...';
+      btn.disabled = true;
+      const v = n => form.querySelector(`[name="${n}"]`)?.value || '';
+      // GASは業界・業種列に状況も入れる（GAS側の再デプロイ不要にするため）
+      const industry = [v('industry'), v('situation')].filter(Boolean).join('｜');
+      const fields = {
+        company: v('company'), email: v('email'), phone: v('phone'),
+        person: v('person'), industry,
+        formId: 'trial-' + form.dataset.formId
+      };
+      try {
+        await fetch(GAS_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(fields) });
+        form.style.display = 'none';
+        form.parentElement.querySelector('.success-msg').style.display = 'block';
+      } catch (err) {
+        btn.textContent = '送信に失敗しました。再度お試しください';
+        btn.disabled = false;
+      }
+    });
+  });
+
+  const floatCta = document.getElementById('float-cta');
+  const contact = document.getElementById('contact');
+  const onScroll = () => {
+    const nearForm = contact.getBoundingClientRect().top < window.innerHeight;
+    floatCta.classList.toggle('visible', window.scrollY > 500 && !nearForm);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+</body>
+</html>
