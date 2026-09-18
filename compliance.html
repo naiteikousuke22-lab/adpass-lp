@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K3WPMV3Q');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>アドパス｜Google広告もMeta広告も、通す。</title>
@@ -218,6 +225,10 @@ footer b{color:#fff}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3WPMV3Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="trial-strip">先着<b>5社限定</b>　アドパスを<b>5日間無料</b>でお試しいただけます</div>
 <header>
@@ -516,7 +527,7 @@ footer b{color:#fff}
 <footer>
   <div class="wrap ft">
     <div><b class="en">AD PASS</b><br>Google広告・Meta広告の審査対応支援</div>
-    
+    <div></div>
   </div>
 </footer>
 
@@ -542,6 +553,7 @@ footer b{color:#fff}
       };
       try {
         await fetch(GAS_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(fields) });
+        try { window.dataLayer = window.dataLayer || []; dataLayer.push({ event: 'form_submit', form_id: fields.formId }); } catch (e) {}
         form.style.display = 'none';
         form.parentElement.querySelector('.success-msg').style.display = 'block';
       } catch (err) {
