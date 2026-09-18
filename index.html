@@ -128,6 +128,12 @@ svg{max-width:100%;height:auto;display:block}
 .case-col:first-child{border-left:0}
 .case-col h4{font-size:13px;margin-bottom:8px;color:var(--navy2)}
 .case-col p{font-size:15px;color:var(--ink2)}
+.case-fix{padding:16px 24px 20px;border-top:1px dashed var(--line);background:#fbfcfe}
+.fix-label{display:inline-block;font-size:12px;font-weight:900;color:var(--navy2);background:#e9effb;padding:3px 10px;border-radius:999px;margin-bottom:6px}
+.fix-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:8px;font-size:14.5px;line-height:1.6}
+.fix-row .ng{color:var(--ng)}
+.fix-row .ok{color:var(--ok);font-weight:700}
+.fix-row .arrow{color:var(--muted);font-weight:900}
 
 .compare{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:32px;box-shadow:var(--shadow)}
 .compare th,.compare td{padding:16px 18px;text-align:left;border-top:1px solid var(--line);vertical-align:top;font-size:15px}
@@ -574,23 +580,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>突破事例</h2>
   </div>
   <div class="wrap case-list">
+    <p class="lead center" style="margin:0 auto 6px">「こう書くと落ちる → こう直すと通る」。実際の直し方の例です。</p>
+
     <div class="case">
-      <div class="case-hd"><b>CASE01 医薬部外品（精力剤・筋肉増強サプリ等）</b><span class="pill ok">4媒体すべてで出稿実現</span></div>
+      <div class="case-hd"><b>CASE01　医薬部外品（精力剤・筋肉増強サプリ 等）</b><span class="pill ok">4媒体すべてで出稿実現</span></div>
       <div class="case-body">
-        <div class="case-col"><h4>課題</h4><p>増強・増大訴求を含む医薬部外品はGoogleの自動審査で即時却下されるのが業界標準。</p></div>
-        <div class="case-col"><h4>施策</h4><p>独自ツールで違反パターンを検知し、CSとエンジニアが表現・構成をロジックに沿って修正。</p></div>
-        <div class="case-col"><h4>結果</h4><p>YouTube・GDN・P-MAX・リスティング全てで出稿を実現、継続運用も可能に。</p></div>
+        <div class="case-col"><h4>課題</h4><p>増強・増大の訴求はGoogleの自動審査で即時却下されるのが業界標準。</p></div>
+        <div class="case-col"><h4>施策</h4><p>効果の断定をやめ、成分・使い方・悩みの受け止めに訴求を移して再申請。</p></div>
+        <div class="case-col"><h4>結果</h4><p>YouTube・GDN・P-MAX・リスティング全てで出稿を実現。</p></div>
+      </div>
+      <div class="case-fix">
+        <span class="fix-label">具体例</span>
+        <div class="fix-row"><span class="ng"><s>必ず大きくなる／増大</s></span><span class="arrow">→</span><span class="ok">年齢とともに気になる方の毎日をサポート</span></div>
+        <div class="fix-row"><span class="ng"><s>体験談で効果を断定</s></span><span class="arrow">→</span><span class="ok">成分と使い方の説明に置き換える</span></div>
       </div>
     </div>
+
     <div class="case">
-      <div class="case-hd"><b>CASE02 オンラインクリニックの医薬品</b><span class="pill ok">4媒体すべてで出稿実現</span></div>
+      <div class="case-hd"><b>CASE02　オンラインクリニックの医薬品</b><span class="pill ok">4媒体すべてで出稿実現</span></div>
       <div class="case-body">
-        <div class="case-col"><h4>課題</h4><p>処方薬・オンライン診療は医療広告ガイドラインと薬機法の両面から審査が特に厳しい。</p></div>
-        <div class="case-col"><h4>施策</h4><p>独自ツールで違反リスクを検知・修正し、ガイドラインに沿った形で再申請。</p></div>
-        <div class="case-col"><h4>結果</h4><p>同じく4媒体全てで出稿を実現、他社が参入できていない領域を確保。</p></div>
+        <div class="case-col"><h4>課題</h4><p>処方薬・オンライン診療は医療広告GLと薬機法の両面で審査が特に厳しい。</p></div>
+        <div class="case-col"><h4>施策</h4><p>訴求を「薬」ではなく「診療の受けやすさ」に移し、費用とリスクを明記。</p></div>
+        <div class="case-col"><h4>結果</h4><p>同じく4媒体すべてで出稿を実現。</p></div>
+      </div>
+      <div class="case-fix">
+        <span class="fix-label">具体例</span>
+        <div class="fix-row"><span class="ng"><s>処方薬の商品名で訴求</s></span><span class="arrow">→</span><span class="ok">医師のオンライン診療・相談の受けやすさを訴求</span></div>
+        <div class="fix-row"><span class="ng"><s>誰でも痩せる／副作用なし</s></span><span class="arrow">→</span><span class="ok">診察のうえ医師が処方を判断します</span></div>
       </div>
     </div>
-    <p class="small">注記：成果は個別事例であり、すべてのアカウント・ジャンルでの出稿を保証するものではありません。</p>
+
+    <div class="case">
+      <div class="case-hd"><b>CASE03　健康食品・化粧品</b><span class="pill ok">継続出稿を実現</span></div>
+      <div class="case-body">
+        <div class="case-col"><h4>課題</h4><p>身体の変化の断定・個人の悩みの名指しが薬機法・景表法で止められる。</p></div>
+        <div class="case-col"><h4>施策</h4><p>言える効能の範囲に表現を収め、根拠のない数値は削除。</p></div>
+        <div class="case-col"><h4>結果</h4><p>表現の作り替えで、止まっていた配信を再開。</p></div>
+      </div>
+      <div class="case-fix">
+        <span class="fix-label">具体例</span>
+        <div class="fix-row"><span class="ng"><s>飲むだけで−5kg／シミが消える</s></span><span class="arrow">→</span><span class="ok">毎日の食事管理をサポート／透明感のある肌を目指す方へ</span></div>
+        <div class="fix-row"><span class="ng"><s>出典のない「満足度No.1」</s></span><span class="arrow">→</span><span class="ok">調査機関・期間・対象を注記（無ければ削除）</span></div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-hd"><b>CASE04　投資・資産運用</b><span class="pill ok">継続出稿を実現</span></div>
+      <div class="case-body">
+        <div class="case-col"><h4>課題</h4><p>利益の断定・元本保証・一部の成功例だけの提示が金融ポリシーに抵触。</p></div>
+        <div class="case-col"><h4>施策</h4><p>訴求を「仕組み・学べる内容」に移し、リスクと手数料を明記。</p></div>
+        <div class="case-col"><h4>結果</h4><p>運営情報・注記を整えて、審査を通過して継続配信。</p></div>
+      </div>
+      <div class="case-fix">
+        <span class="fix-label">具体例</span>
+        <div class="fix-row"><span class="ng"><s>月利10%／元本保証／確実に増える</s></span><span class="arrow">→</span><span class="ok">サービスの仕組み・学べる内容を訴求</span></div>
+        <div class="fix-row"><span class="ng"><s>成功者の収益画面だけを提示</s></span><span class="arrow">→</span><span class="ok">元本割れの可能性・手数料を明記、成果は保証しない旨</span></div>
+      </div>
+    </div>
+
+    <p class="small">※上記は各業種でよく見られる不承認の傾向をもとにした修正例です。成果は個別事例であり、すべてのアカウント・ジャンルでの出稿を保証するものではありません。</p>
   </div>
 </section>
 
