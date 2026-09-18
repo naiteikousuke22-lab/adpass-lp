@@ -16,6 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-LKH77RG0BR');
+  gtag('config', 'AW-18455776916');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -774,6 +775,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       try {
         await fetch(GAS_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(fields) });
         try { window.dataLayer = window.dataLayer || []; dataLayer.push({ event: 'form_submit', form_id: fields.formId }); } catch (e) {}
+        try { gtag('event', 'conversion', { 'send_to': 'AW-18455776916/_Ue6CIK1-PscEJSds-BE', 'value': 1.0, 'currency': 'JPY' }); } catch (e) {}
         form.style.display = 'none';
         form.parentElement.querySelector('.success-msg').style.display = 'block';
       } catch (err) {
