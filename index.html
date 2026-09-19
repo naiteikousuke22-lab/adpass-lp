@@ -183,6 +183,19 @@ details p{padding:0 0 18px;color:var(--ink2);font-size:15px}
 footer{background:#0b1424;color:#9aa6ba;padding:40px 0;font-size:13px}
 .ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 footer b{color:#fff}
+.pcase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px;margin-bottom:20px}
+.pcase{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;box-shadow:var(--shadow);text-align:left}
+.pcase-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px}
+.pcase-no{font-size:12px;font-weight:800;color:var(--navy2)}
+.pcase-risk{font-size:12px;font-weight:700;color:var(--ng);background:var(--ng-bg);border-radius:999px;padding:3px 10px}
+.pcase-name{display:block;font-size:22px;font-weight:900;line-height:1.4}
+.pcase-eg{font-size:14px;color:var(--muted);margin:2px 0 16px}
+.pcase-media{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.pcase-media span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--ok-bg);color:var(--ok)}
+.pcase-media span:before{content:"✓ "}
+.pcase-res{font-size:15px;font-weight:700;border-top:1px dashed var(--line);padding-top:12px}
+.pcase-res em{font-style:normal;color:var(--navy2);background:linear-gradient(transparent 65%,#d9e5fb 65%)}
+@media (max-width:900px){.pcase-grid{grid-template-columns:1fr}.pcase{padding:22px 20px}}
 .float-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none}
 .float-cta .btn{width:100%}
 
@@ -574,71 +587,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<section class="bg-soft">
+<section class="bg-soft" id="cases">
   <div class="wrap center">
     <span class="eyebrow">CASES</span>
-    <h2>突破事例</h2>
+    <h2>こんな商材でも、<br>Google広告の審査に通せました</h2>
+    <p class="lead">「このジャンルはGoogle広告に出せない」と言われがちな商材で、実際に審査を通過し、配信を続けています。</p>
   </div>
-  <div class="wrap case-list">
-    <p class="lead center" style="margin:0 auto 6px">「こう書くと落ちる → こう直すと通る」。実際の直し方の例です。</p>
-
-    <div class="case">
-      <div class="case-hd"><b>CASE01　医薬部外品（精力剤・筋肉増強サプリ 等）</b><span class="pill ok">4媒体すべてで出稿実現</span></div>
-      <div class="case-body">
-        <div class="case-col"><h4>課題</h4><p>増強・増大の訴求はGoogleの自動審査で即時却下されるのが業界標準。</p></div>
-        <div class="case-col"><h4>施策</h4><p>効果の断定をやめ、成分・使い方・悩みの受け止めに訴求を移して再申請。</p></div>
-        <div class="case-col"><h4>結果</h4><p>YouTube・GDN・P-MAX・リスティング全てで出稿を実現。</p></div>
-      </div>
-      <div class="case-fix">
-        <span class="fix-label">具体例</span>
-        <div class="fix-row"><span class="ng"><s>必ず大きくなる／増大</s></span><span class="arrow">→</span><span class="ok">年齢とともに気になる方の毎日をサポート</span></div>
-        <div class="fix-row"><span class="ng"><s>体験談で効果を断定</s></span><span class="arrow">→</span><span class="ok">成分と使い方の説明に置き換える</span></div>
-      </div>
+  <div class="wrap pcase-grid">
+    <div class="pcase">
+      <div class="pcase-top"><span class="pcase-no en">CASE 01</span><span class="pcase-risk">却下リスク 最高水準</span></div>
+      <b class="pcase-name">医薬部外品</b>
+      <p class="pcase-eg">精力剤・筋肉増強サプリ 等</p>
+      <div class="pcase-media"><span>YouTube</span><span>GDN</span><span>P-MAX</span><span>リスティング</span></div>
+      <p class="pcase-res">Google広告 <em>4媒体すべてで審査通過</em></p>
     </div>
-
-    <div class="case">
-      <div class="case-hd"><b>CASE02　オンラインクリニックの医薬品</b><span class="pill ok">4媒体すべてで出稿実現</span></div>
-      <div class="case-body">
-        <div class="case-col"><h4>課題</h4><p>処方薬・オンライン診療は医療広告GLと薬機法の両面で審査が特に厳しい。</p></div>
-        <div class="case-col"><h4>施策</h4><p>訴求を「薬」ではなく「診療の受けやすさ」に移し、費用とリスクを明記。</p></div>
-        <div class="case-col"><h4>結果</h4><p>同じく4媒体すべてで出稿を実現。</p></div>
-      </div>
-      <div class="case-fix">
-        <span class="fix-label">具体例</span>
-        <div class="fix-row"><span class="ng"><s>処方薬の商品名で訴求</s></span><span class="arrow">→</span><span class="ok">医師のオンライン診療・相談の受けやすさを訴求</span></div>
-        <div class="fix-row"><span class="ng"><s>誰でも痩せる／副作用なし</s></span><span class="arrow">→</span><span class="ok">診察のうえ医師が処方を判断します</span></div>
-      </div>
+    <div class="pcase">
+      <div class="pcase-top"><span class="pcase-no en">CASE 02</span><span class="pcase-risk">却下リスク 最高水準</span></div>
+      <b class="pcase-name">オンラインクリニックの医薬品</b>
+      <p class="pcase-eg">オンライン診療・処方 等</p>
+      <div class="pcase-media"><span>YouTube</span><span>GDN</span><span>P-MAX</span><span>リスティング</span></div>
+      <p class="pcase-res">Google広告 <em>4媒体すべてで審査通過</em></p>
     </div>
-
-    <div class="case">
-      <div class="case-hd"><b>CASE03　健康食品・化粧品</b><span class="pill ok">継続出稿を実現</span></div>
-      <div class="case-body">
-        <div class="case-col"><h4>課題</h4><p>身体の変化の断定・個人の悩みの名指しが薬機法・景表法で止められる。</p></div>
-        <div class="case-col"><h4>施策</h4><p>言える効能の範囲に表現を収め、根拠のない数値は削除。</p></div>
-        <div class="case-col"><h4>結果</h4><p>表現の作り替えで、止まっていた配信を再開。</p></div>
-      </div>
-      <div class="case-fix">
-        <span class="fix-label">具体例</span>
-        <div class="fix-row"><span class="ng"><s>飲むだけで−5kg／シミが消える</s></span><span class="arrow">→</span><span class="ok">毎日の食事管理をサポート／透明感のある肌を目指す方へ</span></div>
-        <div class="fix-row"><span class="ng"><s>出典のない「満足度No.1」</s></span><span class="arrow">→</span><span class="ok">調査機関・期間・対象を注記（無ければ削除）</span></div>
-      </div>
+    <div class="pcase">
+      <div class="pcase-top"><span class="pcase-no en">CASE 03</span><span class="pcase-risk">却下リスク 高</span></div>
+      <b class="pcase-name">健康食品・化粧品</b>
+      <p class="pcase-eg">ダイエット・美容系 等</p>
+      <div class="pcase-media"><span>Google広告</span></div>
+      <p class="pcase-res">止まっていた配信を<em>審査通過で再開</em></p>
     </div>
-
-    <div class="case">
-      <div class="case-hd"><b>CASE04　投資・資産運用</b><span class="pill ok">継続出稿を実現</span></div>
-      <div class="case-body">
-        <div class="case-col"><h4>課題</h4><p>利益の断定・元本保証・一部の成功例だけの提示が金融ポリシーに抵触。</p></div>
-        <div class="case-col"><h4>施策</h4><p>訴求を「仕組み・学べる内容」に移し、リスクと手数料を明記。</p></div>
-        <div class="case-col"><h4>結果</h4><p>運営情報・注記を整えて、審査を通過して継続配信。</p></div>
-      </div>
-      <div class="case-fix">
-        <span class="fix-label">具体例</span>
-        <div class="fix-row"><span class="ng"><s>月利10%／元本保証／確実に増える</s></span><span class="arrow">→</span><span class="ok">サービスの仕組み・学べる内容を訴求</span></div>
-        <div class="fix-row"><span class="ng"><s>成功者の収益画面だけを提示</s></span><span class="arrow">→</span><span class="ok">元本割れの可能性・手数料を明記、成果は保証しない旨</span></div>
-      </div>
+    <div class="pcase">
+      <div class="pcase-top"><span class="pcase-no en">CASE 04</span><span class="pcase-risk">却下リスク 高</span></div>
+      <b class="pcase-name">投資・資産運用</b>
+      <p class="pcase-eg">投資スクール・情報サービス 等</p>
+      <div class="pcase-media"><span>Google広告</span></div>
+      <p class="pcase-res">Google広告の<em>審査を通過し継続配信</em></p>
     </div>
-
-    <p class="small">※上記は各業種でよく見られる不承認の傾向をもとにした修正例です。成果は個別事例であり、すべてのアカウント・ジャンルでの出稿を保証するものではありません。</p>
+  </div>
+  <div class="wrap center">
+    <p class="small">※成果は個別事例であり、すべてのアカウント・ジャンルでの出稿を保証するものではありません。</p>
   </div>
 </section>
 
