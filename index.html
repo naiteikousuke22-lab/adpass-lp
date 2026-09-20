@@ -801,6 +801,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   const GAS_URL = 'https://script.google.com/macros/s/AKfycbyQ9UYNiHCMCp0PKY8fJu7hoUMU075YR0wLXgiOYbVSUXV7yBWKkcC_KZhekdvtru97/exec';
 
+  // フォーム入力開始（マイクロCV）。1ページ1回だけ送る
+  let formStarted = false;
+  document.querySelectorAll('.cv-form').forEach(form => {
+    form.addEventListener('focusin', () => {
+      if (formStarted) return;
+      formStarted = true;
+      try { window.dataLayer = window.dataLayer || []; dataLayer.push({ event: 'form_start', form_id: form.dataset.formId }); } catch (e) {}
+    }, { once: false });
+  });
   document.querySelectorAll('.cv-form').forEach(form => {
     form.addEventListener('submit', async e => {
       e.preventDefault();
